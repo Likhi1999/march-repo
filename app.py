@@ -1,16 +1,19 @@
-# Python program to swap two variables
+# Python program to find the factorial of a number provided by the user.
 
-x = 5
-y = 10
+# change the value for a different result
+num = 7
 
-# To take inputs from the user
-#x = input('Enter value of x: ')
-#y = input('Enter value of y: ')
+# To take input from the user
+#num = int(input("Enter a number: "))
 
-# create a temporary variable and swap the values
-temp = x
-x = y
-y = temp
+factorial = 1
 
-print('The value of x after swapping: {}'.format(x))
-print('The value of y after swapping: {}'.format(y))
+# check if the number is negative, positive or zero
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
